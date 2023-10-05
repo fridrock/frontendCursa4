@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/intro.css">
+    <link rel="stylesheet" href="./style/university.css">
+    <link rel="stylesheet" href="./style/review.css">
+    <link rel="icon" type="image/x-icon" href="https://w7.pngwing.com/pngs/452/601/png-transparent-object-database-nosql-nuget-nosql-icon-blue-data-electric-blue.png">
+    <title>Нереляционные базы данных</title>
+</head>
+<body>
+    <script defer src="./scripts/main.js"></script>
+    <header>
+        <img src="https://w7.pngwing.com/pngs/452/601/png-transparent-object-database-nosql-nuget-nosql-icon-blue-data-electric-blue.png" alt="" 
+        >
+        <nav>
+            <a href="/index.html">NoSQLRTU</a>
+            <a href="#description">Описание</a>
+            <a href="">Статьи</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h1>NoSQL от РТУ</h1>
+            <p>Создай аккаунт и изучай нереляционные базы данных вместе с остальными студентами!</p>
+           
+            <form action="#" class="signUp hidden">
+                <button class="closeForm"></button>
+                <input type="email" placeholder="Введите электронную почту">
+                <input type="tel" placeholder="Введите номер телефона">
+                <input type="text" placeholder="Логин (3-16 символов)" pattern="\w{3,16}" required>
+                <input type="password" placeholder="Придумайте пароль" required>
+                <input type="password" placeholder="Повторите пароль" required>
+                <label for="dateOfBirth">Дата рождения</label>
+                <input type="datetime-local" max="2023-12-31" min="1900-12-31">
+                <label for="avatar">Фотография для аватарки</label>
+                <input type="file">
+                <fieldset>
+                    <legend>Роль на портале</legend>
+                    <div class="radioContainer">
+                        <input type="radio" name="role" value="reader" checked>
+                        <label for="role">Читатель</label>
+                    </div>
+                    <div class="radioContainer">
+                        <input type="radio" name="role" value="writer">
+                        <label for="role">Писатель статей</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Обратная связь</legend>
+                    <div class="checkBoxContainer">
+                        <input type="checkbox" name="emailSending">
+                        <label for="emailSending">Хочу получать новости о портале на почту</label>
+                    </div>
+                    <div class="checkBoxContainer">
+                        <input type="checkbox" name="personalData">
+                        <label for="personalData">Cогласие на обработку персональных данных</label>
+                    </div>
+                    
+                </fieldset>
+                
+                <submit>Зарегистрироваться</submit>
+            </form>
+            <form action="#" class="signIn hidden">
+                <button class="closeForm"></button>
+                <input type="text" name="login" placeholder="Логин">
+                <input type="password" name="password" placeholder="Пароль">
+                <submit>Войти</submit>
+            </form> 
+            <div class="accountButtons">
+                <button class="signUpButton">Регистрация</button>
+                <button class="signInButton">Авторизация</button>
+            </div>
+        </section>
+        <section class="university">
+            <h2>О нашем университете</h2>
+            <div class="place">
+                <h3>Наше местоположение</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d35986.720026183975!2d37.47226601750222!3d55.6860320890065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0L_RgNC-0YHQv9C10LrRgiDQstC10YDQvdCw0LTRgdC60L7Qs9C-IDc4!5e0!3m2!1sru!2sru!4v1696527974345!5m2!1sru!2sru" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="videoReview">
+                <h3>Видео обзор</h3>
+                <iframe src="https://www.youtube.com/embed/Dro2k5K2omc?si=jdcrIFVOVg4282vF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            
+        </section>
+        <section class="review">
+            <h2>Можете оставить отзыв о нас</h2>
+            <form action="#">
+                <textarea name="reviewTextArea" id="reviewTextArea" cols="30" rows="10" minlength="10" maxlength="400" placeholder="Текст отзыва" required></textarea>
+                <select name="anonim" id="anonim" multiple size="2" required>
+                    <option value="anonim">Анонимно</option>
+                    <option value="fromAccount">От имени аккаунта</option>
+                </select>
+                <button type="submit">Оставить отзыв</button>
+            </form>
+        </section>
+    </main>
+    
+   
+    <footer>
+        <h2 id="contacts">Контакты</h2>
+        <address>
+            <ul>
+                <li>
+                    <a href="tel: +79000000000">Телефон</a>
+                </li>
+                <li>
+                    <a href="mailto: example@mail.ru">Почта</a>
+                </li>
+             </ul>
+        </address>
+    </footer>
+</body>
+</html>

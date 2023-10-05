@@ -1,0 +1,27 @@
+.review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:rgba(255,255,255,0.8);
+}
+.review form{
+    background-color: rgba(255,255,255,0.9);
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding:1vw 3vw;
+    border-radius: 2vw;
+}
+.review form textarea, .review form select{
+    width: 50vw;
+    margin-top: 2vw;
+    padding:1vw;
+}
+.review form button{
+    margin-top: 2vw;
+    background-color: green;
+    padding:0.3vw 1vw;
+    color: white;
+    border-radius: 2vw;
+}

@@ -1,0 +1,85 @@
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding:4vw 2vw;
+    align-items: center;
+    color:white;
+}
+.accountButtons button{
+    background-color: white;
+    padding:1vw 2vw;
+    border-radius: 2vw;
+    transition-duration: 0.5s;
+    color:black;
+}
+.accountButtons button:hover{
+    background-color: green;
+    color:white;
+}
+.intro form{
+    min-width: 50vw;
+    position: relative;
+    background-color: #fff;
+    color: black;
+    padding:2vw;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.intro form input, .intro form label, .intro form fieldset{
+    margin-top: 1vw;
+}
+.intro form input:focus{
+    transform:scale(1.1);
+}
+.intro form input[type="text"],
+.intro form input[type="email"],
+.intro form input[type="tel"],
+.intro form input[type="password"],
+.intro form input[type="datetime-local"],
+.intro form input[type="file"]
+{
+    width: 85%;
+    padding:0.4vw;
+    font-size: 0.8em;
+}
+.intro form input[type="text"]::placeholder,
+.intro form input[type="email"]::placeholder,
+.intro form input[type="tel"]::placeholder,
+.intro form input[type="password"]::placeholder{
+    color: red;
+}
+.intro form submit{
+    background-color: green;
+    color: white;
+    padding:1vw 2vw;
+    border-radius: 2vw;
+    cursor:pointer;
+    margin-top: 1vw;
+}
+.intro form.hidden{
+    display: none;
+}
+.accountButtons{
+    margin-top: 2vw;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.closeForm{
+    top: 1vw;
+    right: 1vw;
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    background-image: url("../img/close.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    object-position: center;
+}
