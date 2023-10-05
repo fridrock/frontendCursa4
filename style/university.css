@@ -12,6 +12,7 @@
     text-align: center;
 }
 .place h3, .videoReview h3{
+    margin:2vw;
     text-align: center;
 }
 .place{

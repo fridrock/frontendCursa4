@@ -1,0 +1,45 @@
+header{
+    width: 100vw;
+    position:fixed;
+    padding:2vw 4vw;
+    top:0;
+    left: 0;
+    display: flex;
+    border-bottom:1px solid white;
+    color:var(--whiteColor);
+    backdrop-filter: blur(2vw);
+    z-index: 3;
+    justify-content: space-around;
+    align-items: center;
+}
+header > nav{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 80vw;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+header > nav > a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    text-decoration: none;
+    color:white;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    transition-duration:0.3s;
+}
+header> img{
+    width: 5vw;
+    height: 2.5vw;
+    position: absolute;
+    top: auto;
+    left: 3vw;
+}

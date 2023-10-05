@@ -1,3 +1,10 @@
+:root{
+    --whiteColor:rgba(255,255,255,0.8);
+}
+*{
+    margin:0;
+    padding:0;
+}
 body{
     width: 100vw;
     min-height: 100vh;
@@ -20,53 +27,6 @@ button, input[type="submit"], input[type="reset"] {
 	outline: inherit;
 }
 
-header{
-    width: 100vw;
-    position:fixed;
-    padding:2vw 4vw;
-    top:0;
-    left: 0;
-    display: flex;
-    border-bottom:1px solid white;
-    backdrop-filter: blur(2vw);
-    z-index: 3;
-    justify-content: space-around;
-    align-items: center;
-}
-header > nav{
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 80vw;
-    height: 100%;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-
-}
-header > nav > a{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    height: 100%;
-    text-decoration: none;
-    color: black;
-    font-size: 1.3em;
-    transition-duration:0.3s;
-}
-header > nav > a:hover{
-    background: black;
-    color:white;
-}
-header> img{
-    width: 5vw;
-    height: 2.5vw;
-    position: absolute;
-    top: auto;
-    left: 3vw;
-}
 section{
     width: auto;
     font-size: 1.6em;
@@ -78,8 +38,6 @@ main{
     padding:4.5vw 3vw;
 }
 footer{
-    width: 80vw;
-    margin-left: 20vw;
     margin-top: 5vw;
     height: auto;
     display: flex;

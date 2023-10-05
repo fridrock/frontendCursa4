@@ -4,10 +4,25 @@
     justify-content: start;
     padding:4vw 2vw;
     align-items: center;
-    color:white;
+    color:var(--whiteColor);
+}
+.intro h1{
+    font-size: 10vw;
+}
+.intro p{
+    text-align: center;
+    font-size: 3vw;
+    max-width: 70vw;
+    margin-top: 4vw;
+}
+.accountButtons{
+    margin-top: 4vw;
+}
+.accountButtons button:last-child{
+    margin-left: 4vw;
 }
 .accountButtons button{
-    background-color: white;
+    background-color: var(--whiteColor);
     padding:1vw 2vw;
     border-radius: 2vw;
     transition-duration: 0.5s;
@@ -28,6 +43,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    margin-top: 4vw;
 }
 .intro form input, .intro form label, .intro form fieldset{
     margin-top: 1vw;
@@ -62,9 +78,6 @@
 }
 .intro form.hidden{
     display: none;
-}
-.accountButtons{
-    margin-top: 2vw;
 }
 fieldset{
     display: flex;
