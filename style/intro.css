@@ -52,7 +52,7 @@
 .intro form input[type="password"]::placeholder{
     color: red;
 }
-.intro form submit{
+.intro form button[type="submit"]{
     background-color: green;
     color: white;
     padding:1vw 2vw;
