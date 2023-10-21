@@ -1,0 +1,29 @@
+footer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding:3vw 5vw;
+    color:var(--whiteColor);
+}
+
+address > ul {
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+address > ul > li > a{
+    color:var(--whiteColor);
+    text-decoration: none;
+    font-size: 1.7em;
+    transition-duration: 1s;
+}
+
+@media screen and (max-width:768px){
+    address>ul{
+        flex-direction: column;
+        justify-content: start;
+    }
+}

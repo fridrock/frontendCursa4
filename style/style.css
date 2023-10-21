@@ -45,41 +45,19 @@ footer{
     justify-content: start;
     align-items: center;
 }
-h1,h2{
-    font-size: 2.3em;
+h1{
+    font-size: 15vw;
 }
-dt ~ dd{
-    color:rebeccapurple;
+h2{
+    font-size: 10vw;
 }
-dt + dd{
-    font-size: 1.1em;
-}
-dt  {
-    font-size: 1.5em;
-}
-dt>a{
-    color: black;
-}
-footer h2{
-    display: block;
-    top: 0;
-    left: auto;
-}
-address > ul {
-    width: 80vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-}
-address > ul > li > a:hover{
-    font-size: 2em;
-}
-address > ul > li > a{
-    color: black;
-    text-decoration: none;
-    font-size: 1.7em;
-    transition-duration: 1s;
+@media screen and (max-width:768px){
+    h1{
+        font-size: 7vw;
+    }
+    h2{
+        font-size: 6vw;
+    }
 }
 .comparison > img {
     float:right;

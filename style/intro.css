@@ -96,3 +96,15 @@ fieldset{
     background-repeat: no-repeat;
     object-position: center;
 }
+@media screen and (max-width:768px){
+    .accountButtons{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    .accountButtons button:last-child{
+        margin-left: 0vw;
+        margin-top:4vw;
+    }
+}

@@ -7,21 +7,26 @@
     <link rel="stylesheet" href="./style/intro.css">
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/university.css">
+    <link rel="stylesheet" href="./style/galery.css">
     <link rel="stylesheet" href="./style/review.css">
+    <link rel="stylesheet" href="./style/footer.css">
     <link rel="icon" type="image/x-icon" href="https://w7.pngwing.com/pngs/452/601/png-transparent-object-database-nosql-nuget-nosql-icon-blue-data-electric-blue.png">
     <title>Нереляционные базы данных</title>
 </head>
 <body>
     <script defer src="./scripts/main.js"></script>
     <header>
-        <img src="./img/logo.svg" alt="" 
-        >
-        <nav>
-            <a href="/index.html">NoSQLRTU</a>
-            <a href="#description">Описание</a>
-            <a href="">Статьи</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
+        <img class="logo" src="./img/logo.svg" alt="">
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a href="#intro">Intro</a></li>
+            <li><a href="#university">University</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#ss">SS</a></li>
+        </ul>
     </header>
     <main>
         <section class="intro">
@@ -47,7 +52,7 @@
                     </div>
                     <div class="radioContainer">
                         <input type="radio" name="role" value="writer">
-                        <label for="role">Писатель статей</label>
+                        <label for="role">Автор статей</label>
                     </div>
                 </fieldset>
                 <fieldset>
@@ -78,7 +83,8 @@
         </section>
         <section class="university">
             <h2>О нашем университете</h2>
-            <div class="place">
+            <div class="universityContent">
+                <div class="place">
                 <h3>Наше местоположение</h3>
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d35986.720026183975!2d37.47226601750222!3d55.6860320890065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0L_RgNC-0YHQv9C10LrRgiDQstC10YDQvdCw0LTRgdC60L7Qs9C-IDc4!5e0!3m2!1sru!2sru!4v1696527974345!5m2!1sru!2sru" 
@@ -91,6 +97,7 @@
             <div class="videoReview">
                 <h3>Видео обзор</h3>
                 <iframe src="https://www.youtube.com/embed/Dro2k5K2omc?si=jdcrIFVOVg4282vF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
             </div>
             
         </section>
@@ -107,7 +114,19 @@
         </section>
     </main>
     
-   
+   <section class="galery">
+    <h2>Галерея</h2>
+    <div class="image-gallery">
+        <div class="column">
+            <img src="img/1.png" >
+            <img src="img/2.jpg" >
+        </div>
+        <div class="column">
+            <img src="img/3.png" >
+            <img src="img/4.png" >
+        </div>
+    </div>
+   </section>
     <footer>
         <h2 id="contacts">Контакты</h2>
         <address>
