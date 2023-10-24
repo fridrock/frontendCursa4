@@ -1,0 +1,102 @@
+.notifications {
+    width: auto;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: auto;
+    height:auto;
+    padding:0vw;
+    background-color: transparent;
+    backdrop-filter: blur(3em);
+    border-radius: 2vw;
+    transition:all 0.7s ease-in;
+    padding:0.5vw;
+    top:10vw;
+    right:5vw;
+  }
+  .notificationsHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .notificationsHeaderText{
+    display: flex;
+    justify-content: center;align-items: center;
+    width: 0;
+    height:0;
+    opacity:0;
+    color:transparent;
+    -webkit-text-stroke: 1.5px white;
+    text-stroke:1.5px white;
+    animation:boundsHeading infinite 1.5s ease-in-out;
+    font-size: 2.5vw;
+  }
+  .notifications-circle {
+    align-self: flex-end;
+    width: 3vw;
+    height: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .notifications-circle img {
+    z-index: 2;
+    object-fit:contain;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+  }
+  .notifications-list {
+    height: 0;  
+    border-radius: 10px;
+    transition: all 0.7s ease-in-out;
+    width:0vw;
+    overflow:hidden;
+    padding-bottom:0vw;
+  }
+  .notifications:hover{
+    padding:1.5vw 2vw;
+  }
+  .notifications:hover > .notifications-list{
+    height:auto;
+    width:30vw;
+    margin-top: 1vw;
+    padding-bottom:2vw;
+  }
+  .notifications:hover > .notificationsHeader > .notificationsHeaderText{
+    width: auto;
+    height:auto;
+    opacity:0.8;
+  }
+  
+  .notification {
+    font-size: 2vw;
+    width: 30vw;
+    -webkit-text-stroke:0.7px white;
+    color:transparent;
+    text-stroke:0.7px white;
+    padding:1vw;
+    transition:transform 0.2s ease-in;
+    border-bottom:1px solid rgba(255,255,255,0.5);
+  }
+  
+  .notification:hover {
+    transform:scale(1.03);
+    -webkit-text-stroke:1px white;
+    text-stroke:1px white;
+  }
+  @keyframes boundsHeading{
+    from {
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.03);
+    }
+    to{
+        transform:scale(1);
+    }
+  }

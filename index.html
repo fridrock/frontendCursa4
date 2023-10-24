@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/notifications.css">
     <link rel="stylesheet" href="./style/intro.css">
     <link rel="stylesheet" href="./style/header.css">
     <link rel="stylesheet" href="./style/university.css">
+    <link rel="stylesheet" href="./style/buttons.css">
     <link rel="stylesheet" href="./style/galery.css">
     <link rel="stylesheet" href="./style/review.css">
     <link rel="stylesheet" href="./style/footer.css">
@@ -25,10 +27,24 @@
             <li><a href="#intro">Intro</a></li>
             <li><a href="#university">University</a></li>
             <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#ss">SS</a></li>
         </ul>
     </header>
     <main>
+        <div class="notifications">
+            <div class="notificationsHeader">
+                <div class="notificationsHeaderText">Новые статьи</div>
+                <div class="notifications-circle">
+                    <img src="img/notification.png" alt="kolokol" />
+                </div>
+            </div>
+            <div class="notifications-list">
+                <div class="notification">Статья про миграции</div>
+                <div class="notification">
+                    Статья про современные нереляционные базы данных
+                </div>
+                <div class="notification">Статья про документоориентированную модель</div>
+              </div>
+          </div>
         <section class="intro">
             <h1>NoSQL от РТУ</h1>
             <p>Создай аккаунт и изучай нереляционные базы данных вместе с остальными студентами!</p>
@@ -113,7 +129,12 @@
             </form>
         </section>
     </main>
-    
+    <div class="buttons">
+        <button class="button1">Кнопка1</button>
+        <button class="button2"><span>Кнопка</span></button>
+        <button class="button3">Кнопка</button>
+        <button class="button4">Кнопка</button>
+    </div>
    <section class="galery">
     <h2>Галерея</h2>
     <div class="image-gallery">
