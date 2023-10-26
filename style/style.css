@@ -7,15 +7,17 @@
 }
 body{
     width: 100vw;
-    min-height: 100vh;
+    height: 100%;
     margin:0;
     padding:0;
     font-family: 'Oswald', sans-serif;
     position: relative;
     scroll-padding-top: 9vh;
     overflow-x:hidden;
-    background: rgb(100,39,219);
-    background: radial-gradient(circle, rgba(100,39,219,1) 0%, rgba(146,67,208,1) 18%, rgba(78,91,214,1) 50%, rgba(40,135,194,1) 76%, rgba(156,0,255,1) 100%); 
+    background-color: #310e68;
+    
+    
+    /* background-repeat: no-repeat; */
 }
 button, input[type="submit"], input[type="reset"] {
 	background: none;

@@ -22,13 +22,44 @@
     gap:10px;
 }
 
-.column img {
+.photoContainer img {
     width: 100%;
     border-radius: 5px;
     height: 100%;
     object-fit: cover;
     opacity:0.9;
 } 
+.photoContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.photoDescription{
+    position: absolute;
+    top:0%;
+    left: 0%;
+    background: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    height:100%;
+    display: none;
+    z-index: 3;
+    color:white;
+    opacity:0.9;
+    
+}
+.photoContainer:hover > .photoDescription{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.photoDescriptionHeading{
+    font-size: 2em;
+}
+.photoDescriptionText{
+    font-size: 1em;
+}
 @media screen and (max-width: 768px) {
     .image-gallery {
       flex-direction: column;
