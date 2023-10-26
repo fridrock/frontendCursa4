@@ -25,12 +25,16 @@
   }
   .notificationsHeaderText{
     display: flex;
-    justify-content: center;align-items: center;
-    max-width: 0;
+    justify-content: center;
+    align-items: center;
+    width: 0;
     height:0;
     opacity:0;
+    overflow: hidden;
     color:transparent;
+    white-space: nowrap;
     -webkit-text-stroke: 1.5px white;
+    transition:opacity 0.8s ease-in-out;
     text-stroke:1.5px white;
     animation:boundsHeading infinite 1.5s ease-in-out;
     font-size: 2.5vw;
@@ -72,13 +76,12 @@
   }
   .notifications:hover > .notificationsHeader > .notificationsHeaderText{
     width: auto;
-    max-width: fit-content;
-    height:auto;
-    opacity:0.8;
+    height: auto;
+    opacity:1;
+    overflow:visible;
   }
   
   .notification {
-    
     font-size: 2vw;
     width: 30vw;
     -webkit-text-stroke:0.7px white;
@@ -93,7 +96,8 @@
     border-radius: 3vw;
     background-color: #310e68;
   background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
-    transform:scale(1.2);
+    transform:scale(1.1);
+    border-bottom: none;
     -webkit-text-stroke:1px white;
     text-stroke:1px white;
   }

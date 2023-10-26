@@ -54,6 +54,9 @@
     justify-content: center;
     align-items: center;
 }
+.videoDescriptionHeader{
+    white-space: nowrap;
+}
 .videoReview:hover > .videoReviewDescription{
     opacity:1;
     width: 80%;
