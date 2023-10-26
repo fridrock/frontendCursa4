@@ -7,17 +7,15 @@
 }
 body{
     width: 100vw;
-    height: 100%;
+    height:max-content;
     margin:0;
     padding:0;
     font-family: 'Oswald', sans-serif;
     position: relative;
-    scroll-padding-top: 9vh;
     overflow-x:hidden;
     background-color: #310e68;
-    
-    
-    /* background-repeat: no-repeat; */
+background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+    background-size: 100% 100%;
 }
 button, input[type="submit"], input[type="reset"] {
 	background: none;

@@ -42,17 +42,19 @@
     backdrop-filter: blur(20px);
     width: 100%;
     height:100%;
-    display: none;
     z-index: 3;
     color:white;
-    opacity:0.9;
-    
-}
-.photoContainer:hover > .photoDescription{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+    
+}
+.photoContainer:hover > .photoDescription{
+    
+    opacity:0.9;
 }
 .photoDescriptionHeading{
     font-size: 2em;

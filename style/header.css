@@ -2,7 +2,6 @@
 
 html, body {
   margin: 0;
-  height: 100%;
 }
 *{
     box-sizing: border-box;
@@ -12,8 +11,6 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background: rgb(100,39,219);
-    background: radial-gradient(circle, rgba(100,39,219,1) 0%, rgba(146,67,208,1) 18%, rgba(78,91,214,1) 50%, rgba(40,135,194,1) 76%, rgba(156,0,255,1) 100%);
   color:white;
   border-bottom: 1px solid white;
   height:50px;
