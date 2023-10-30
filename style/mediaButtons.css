@@ -1,0 +1,42 @@
+.mediaButtons{
+    padding:5vw 15vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.mediaButton{
+    position: relative;
+    width: 7vw;
+    height: 7vw;
+    padding:2vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;align-items: center;
+    overflow:hidden;
+}
+.mediaButton::after, .mediaButton::before{
+    position: absolute;
+    content:'';
+    top:0;
+    left: 0;
+    width: 100%;
+   
+}
+.mediaButton::before{
+    background-color: black;
+    z-index: -2;
+    height: 100%;
+}
+.mediaButton::after{
+    height: 0%;
+    transition:height 0.5s ease-out;
+    z-index: -1;
+}
+.mediaButton:hover:after{
+    height: 100%;
+    background: linear-gradient(#FF512F , #DD2476);;
+}
+.mediaButtonIcon{
+    width: 100%;
+    height: 100%;
+}

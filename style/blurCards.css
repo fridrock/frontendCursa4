@@ -1,0 +1,87 @@
+.blurCards{
+    position: relative;
+    padding:5vw 10vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 1vw;
+}
+.blurCardContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: #fff;
+    transform:scale(1);
+    padding:0vw 0vw 3vw 0vw;
+    border-radius: 1vw;
+    transition:transform 0.5s ease-in-out;
+    z-index:1;
+}
+.blurCardContainer:hover{
+    transform:scale(1.1);
+    z-index: 3;
+}
+.blurBlock{
+    backdrop-filter: blur(0);
+    transition:all 0.5s ease-in-out;
+}
+.blurCardContainer:hover + .blurBlock{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(0.6em);
+    
+    z-index: 2;
+}
+
+.blurCardNumber{
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    
+    padding:3vw 0vw 6vw 0vw;
+    font-size: 3.5vw;
+}
+.blurCardNumber::before{
+    position: absolute;
+    border-radius: 40%;
+    border-top-right-radius: 1vw;
+    border-top-left-radius:1vw;
+    content:'';
+    left: 0;
+    top: -5%;
+    height: 105%;
+    width: 100%;
+    background-color: purple;
+    z-index: -1;
+}
+.blurCardText{
+    margin-top: 1vw;
+    text-align: center;
+    font-size: 1.3vw;
+    padding:0vw 2vw;
+}
+.blurCardLink{
+    color:white;
+    text-decoration: none;
+    background-color: purple;
+    padding:1vw 2vw;
+    border-radius: 1vw;
+    margin-top: auto;
+    font-size: 1.4vw;
+}
+
+
+@media screen and (max-width:768px){
+    .blurCardContainer:hover + .blurBlock{
+        backdrop-filter: blur(0.3em); 
+    }
+}

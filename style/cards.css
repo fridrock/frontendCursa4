@@ -1,0 +1,104 @@
+:root{
+    --cardContainerWidth:27vw;
+    --cardContainerHeight:calc(var(--cardContainerWidth)*1.3);
+    --cardContentPseudoSize:calc(var(--cardContainerWidth)*0.18);
+    --cardContentPseudoVerticalPosition:calc((var(--cardContainerHeight) - var(--cardContainerHeight)*0.6)/2);
+}
+.cards{
+    padding:3vw 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardContainer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cardContainerWidth);
+    height: var(--cardContainerHeight);
+}
+.cardContent{
+    width: 100%;
+    height: calc(var(--cardContainerHeight)*0.6);
+    padding:2vw 4vw;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter:blur(2em);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    border-radius: 2vw;
+    align-items: center;
+}
+.cardContent::before, .cardContent::after{
+    content:'';
+    position: absolute;
+    width:var(--cardContentPseudoSize);
+    height:var(--cardContentPseudoSize);
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter:blur(2em);
+    animation-name:animateBlock;
+    animation-iteration-count:infinite;
+    animation-duration:5s;
+    animation-timing-function:ease-in-out;
+    border-radius: 10%;
+    animation-play-state: paused;
+    opacity:0;
+    transition:opacity 0.5s ease-in-out;
+}
+.cardContent::before{
+    top:calc(var(--cardContentPseudoVerticalPosition)*(-1));
+    left:0;
+    animation-direction: alternate;
+}
+.cardContent::after{
+    bottom:calc(var(--cardContentPseudoVerticalPosition)*(-1));
+    left:22vw;
+    animation-direction: alternate-reverse;
+}
+.cardContent:hover + .cardBg{
+    transform:skew(0);
+}
+.cardContent:hover::after, .cardContent:hover::before{
+    animation-play-state: running;
+    opacity:1;
+}
+.cardHeading{
+    color:white;
+    font-size: 3vw;
+    text-align: center;
+}
+.cardText{
+    font-size: 1.3vw;
+    color:white;
+    margin-top: 1vw;
+}
+.cardLink{
+    margin-top:auto;
+    padding:1vw 3vw;
+    text-decoration: none;
+    background-color: #fff;
+    color: black;
+    font-size: 1.2vw;
+    border-radius: 2vw;
+}
+.cardBg{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top:0;
+    left:25%;
+    transform:skewX(8deg);
+    transition:all 0.5s ease-in-out;
+    background:linear-gradient(#662D8C , #ED1E79);
+    border-radius: 1vw;
+}
+@keyframes animateBlock{
+    from{
+        left:0;      
+    }
+    to{
+        left:22vw;
+    }
+}

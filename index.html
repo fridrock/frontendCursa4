@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="./style/university.css">
     <link rel="stylesheet" href="./style/buttons.css">
     <link rel="stylesheet" href="./style/galery.css">
+    <link rel="stylesheet" href="./style/cards.css">
+    <link rel="stylesheet" href="./style/mediaButtons.css">
+    <link rel="stylesheet" href="./style/blurCards.css">
+    <link rel="stylesheet" href="./style/animatedCards.css">
     <link rel="stylesheet" href="./style/review.css">
     <link rel="stylesheet" href="./style/footer.css">
     <link rel="icon" type="image/x-icon" href="https://w7.pngwing.com/pngs/452/601/png-transparent-object-database-nosql-nuget-nosql-icon-blue-data-electric-blue.png">
@@ -49,53 +53,19 @@
             <h1>NoSQL от РТУ</h1>
             <p>Создай аккаунт и изучай нереляционные базы данных вместе с остальными студентами!</p>
            
-            <form action="#" class="signUp hidden">
-                <button class="closeForm"></button>
-                <input type="email" placeholder="Введите электронную почту">
-                <input type="tel" placeholder="Введите номер телефона">
-                <input type="text" placeholder="Логин (3-16 символов)" pattern="\w{3,16}" required>
-                <input type="password" placeholder="Придумайте пароль" required>
-                <input type="password" placeholder="Повторите пароль" required>
-                <label for="dateOfBirth">Дата рождения</label>
-                <input type="datetime-local" max="2023-12-31" min="1900-12-31">
-                <label for="avatar">Фотография для аватарки</label>
-                <input type="file">
-                <fieldset>
-                    <legend>Роль на портале</legend>
-                    <div class="radioContainer">
-                        <input type="radio" name="role" value="reader" checked>
-                        <label for="role">Читатель</label>
-                    </div>
-                    <div class="radioContainer">
-                        <input type="radio" name="role" value="writer">
-                        <label for="role">Автор статей</label>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Обратная связь</legend>
-                    <div class="checkBoxContainer">
-                        <input type="checkbox" name="emailSending">
-                        <label for="emailSending">Хочу получать новости о портале на почту</label>
-                    </div>
-                    <div class="checkBoxContainer">
-                        <input type="checkbox" name="personalData">
-                        <label for="personalData">Cогласие на обработку персональных данных</label>
-                    </div>
-                    
-                </fieldset>
-                
-                <button type="submit">Зарегистрироваться</button>
-            </form>
-            <form action="#" class="signIn hidden">
-                <button class="closeForm"></button>
+            <form action="#" class="signIn">
+                <div class="square first"></div>
+                <div class="square second"></div>
+                <div class="square third"></div>
+                <div class="square fourth"></div>
+                <div class="square fifth"></div>
+                <h3 class="authHeading">Авторизация</h3>
                 <input type="text" name="login" placeholder="Логин">
                 <input type="password" name="password" placeholder="Пароль">
                 <button type="submit">Войти</button>
+                <p>Забыли пароль? <a href="#" class="forgetPassword">Перейти</a></p>
+                <p>Еще нет аккаунта? <a href="#" class="registration">Зарегистрироваться</a></p>
             </form> 
-            <div class="accountButtons">
-                <button class="signUpButton">Регистрация</button>
-                <button class="signInButton">Авторизация</button>
-            </div>
         </section>
         <section class="university">
             <h2>О нашем университете</h2>
@@ -112,7 +82,7 @@
             <div class="videoReview">
                 <div class="videoReviewDescription">
                     <h3 class="videoDescriptionHeader">Обзор на университет</h3>
-                    <p class="videoDescriptionText">Больше информации на сайте <a href="lk.mirea.ru">РТУ МИРЭА</a></p>
+                    <p class="videoDescriptionText">Больше информации на сайте <br> <a href="lk.mirea.ru">РТУ МИРЭА</a></p>
                 </div>
                 <iframe src="https://www.youtube.com/embed/Dro2k5K2omc?si=jdcrIFVOVg4282vF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
                     
@@ -121,61 +91,134 @@
             </div>
             
         </section>
-        <section class="review">
-            <h2>Можете оставить отзыв о нас</h2>
-            <form action="#">
-                <textarea name="reviewTextArea" id="reviewTextArea" cols="30" rows="10" minlength="10" maxlength="400" placeholder="Текст отзыва" required></textarea>
-                <select name="anonim" id="anonim" multiple size="2" required>
-                    <option value="anonim">Анонимно</option>
-                    <option value="fromAccount">От имени аккаунта</option>
-                </select>
-                <button type="submit">Оставить отзыв</button>
-            </form>
+        <div class="buttons">
+            <button class="button1">Кнопка1</button>
+            <button class="button2"><span>Кнопка</span></button>
+            <button class="button3">Кнопка</button>
+            <button class="button4">Кнопка</button>
+        </div>
+        <section class="cards">
+            <div class="cardContainer">
+                <div class="cardContent">
+                    <h3 class="cardHeading">Heading1</h3>
+                    <p class="cardText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae quam harum labore cum ullam dolore!</p>
+                    <a href="" class="cardLink">Подробнее</a>
+                </div>
+                <div class="cardBg"></div>
+            </div>
+            <div class="cardContainer">
+                <div class="cardContent">
+                    <h3 class="cardHeading">Heading2</h3>
+                    <p class="cardText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, nisi ipsa minima rerum animi voluptatum.</p>
+                    <a href="" class="cardLink">Подробнее</a>
+                </div>
+                <div class="cardBg"></div>
+            </div>
+            <div class="cardContainer">
+                <div class="cardContent">
+                    <h3 class="cardHeading">Heading3</h3>
+                    <p class="cardText">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit molestias, eligendi eum voluptas possimus veniam!</p>
+                    <a href="" class="cardLink">Подробнее</a>
+                </div>
+                <div class="cardBg"></div>
+            </div>
         </section>
+        <section class="mediaButtons">
+            <button class="mediaButton">
+                <img src="./img/vk.svg" alt="" class="mediaButtonIcon">
+            </button>
+            <button class="mediaButton">
+                <img src="./img/inst.svg" alt="" class="mediaButtonIcon">
+            </button>
+            <button class="mediaButton">
+                <img src="./img/whatsap.svg" alt="" class="mediaButtonIcon">
+            </button>
+        </section>
+        <section class="blurCards">
+            <div class="blurCardContainer">
+                <h3 class="blurCardNumber">01</h3>
+                <p class="blurCardText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repellendus recusandae illum a! Aut, magni!</p>
+                <a href="" class="blurCardLink">Подробнее</a>
+            </div>
+            <div class="blurBlock"></div>
+            <div class="blurCardContainer">
+                <h3 class="blurCardNumber">02</h3>
+                <p class="blurCardText">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae magni est sunt maxime repellendus! Quae?</p>
+                <a href="" class="blurCardLink">Подробнее</a>
+            </div>
+            <div class="blurBlock"></div>
+            <div class="blurCardContainer">
+                <h3 class="blurCardNumber">03</h3>
+                <p class="blurCardText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur repellendus facere porro! Necessitatibus, molestias quae.</p>
+                <a href="" class="blurCardLink">Подробнее</a>
+            </div>
+            <div class="blurBlock"></div>
+        </section>
+        <section class="animatedCards">
+            <div class="animatedCard">
+                <h3 class="animatedHeading">Заголовок 1</h3>
+                <div class="animatedNumberContainer">
+                    <h4 class="animatedNumber">01</h4>
+                </div>
+                <p class="animatedText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quia illo excepturi ipsum. Non, magni asperiores.</p>
+                <a href="" class="animatedLink">Подробнее</a>
+            </div>
+            <div class="animatedCard">
+                <h3 class="animatedHeading">Заголовок 2</h3>
+                <div class="animatedNumberContainer">
+                    <h4 class="animatedNumber">02</h4>
+                </div>
+                <p class="animatedText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quia illo excepturi ipsum. Non, magni asperiores.</p>
+                <a href="" class="animatedLink">Подробнее</a>
+            </div>
+            <div class="animatedCard">
+                <h3 class="animatedHeading">Заголовок 3</h3>
+                <div class="animatedNumberContainer">
+                    <h4 class="animatedNumber">03</h4>
+                </div>
+                <p class="animatedText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quia illo excepturi ipsum. Non, magni asperiores.</p>
+                <a href="" class="animatedLink">Подробнее</a>
+            </div>
+        </section>
+       <section class="galery">
+        <h2>Галерея</h2>
+        <div class="image-gallery">
+            <div class="column">
+                <div class="photoContainer">
+                    <img src="img/1.png" >
+                    <div class="photoDescription">
+                        <h2 class="photoDescriptionHeading">Heading</h2>
+                        <p class="photoDescriptionText">Text</p>
+                    </div>
+                </div>
+                <div class="photoContainer">
+                    <img src="img/2.jpg" >
+                    <div class="photoDescription">
+                        <h2 class="photoDescriptionHeading">Heading</h2>
+                        <p class="photoDescriptionText">Text</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="photoContainer">
+                    <img src="img/3.png" >
+                    <div class="photoDescription">
+                        <h2 class="photoDescriptionHeading">Heading</h2>
+                        <p class="photoDescriptionText">Text</p>
+                    </div>
+                </div>
+                <div class="photoContainer">
+                    <img src="img/4.png" >
+                    <div class="photoDescription">
+                        <h2 class="photoDescriptionHeading">Heading</h2>
+                        <p class="photoDescriptionText">Text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
     </main>
-    <div class="buttons">
-        <button class="button1">Кнопка1</button>
-        <button class="button2"><span>Кнопка</span></button>
-        <button class="button3">Кнопка</button>
-        <button class="button4">Кнопка</button>
-    </div>
-   <section class="galery">
-    <h2>Галерея</h2>
-    <div class="image-gallery">
-        <div class="column">
-            <div class="photoContainer">
-                <img src="img/1.png" >
-                <div class="photoDescription">
-                    <h2 class="photoDescriptionHeading">Heading</h2>
-                    <p class="photoDescriptionText">Text</p>
-                </div>
-            </div>
-            <div class="photoContainer">
-                <img src="img/2.jpg" >
-                <div class="photoDescription">
-                    <h2 class="photoDescriptionHeading">Heading</h2>
-                    <p class="photoDescriptionText">Text</p>
-                </div>
-            </div>
-        </div>
-        <div class="column">
-            <div class="photoContainer">
-                <img src="img/3.png" >
-                <div class="photoDescription">
-                    <h2 class="photoDescriptionHeading">Heading</h2>
-                    <p class="photoDescriptionText">Text</p>
-                </div>
-            </div>
-            <div class="photoContainer">
-                <img src="img/4.png" >
-                <div class="photoDescription">
-                    <h2 class="photoDescriptionHeading">Heading</h2>
-                    <p class="photoDescriptionText">Text</p>
-                </div>
-            </div>
-        </div>
-    </div>
-   </section>
+    
     <footer>
         <h2 id="contacts">Контакты</h2>
         <address>

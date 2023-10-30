@@ -1,4 +1,6 @@
-
+.galery{
+    margin-top: 2vw;
+}
 .galery h2{
     text-align: center;
     color:var(--whiteColor);

@@ -9,33 +9,11 @@
 .intro h1{
     font-size: 10vw;
 }
-.intro p{
-    text-align: center;
-    font-size: 3vw;
-    max-width: 70vw;
-    margin-top: 4vw;
-}
-.accountButtons{
-    margin-top: 4vw;
-}
-.accountButtons button:last-child{
-    margin-left: 4vw;
-}
-.accountButtons button{
-    background-color: var(--whiteColor);
-    padding:1vw 2vw;
-    border-radius: 2vw;
-    transition-duration: 0.5s;
-    color:black;
-}
-.accountButtons button:hover{
-    background-color: green;
-    color:white;
-}
 .intro form{
-    min-width: 50vw;
+    width: 40vw;
     position: relative;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter:blur(2em);
     color: black;
     padding:2vw;
     border-radius: 2vw;
@@ -43,68 +21,146 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    margin-top: 4vw;
+    margin-top: 10vw;
+    margin-bottom:10vw;
+    z-index: 0;
 }
-.intro form input, .intro form label, .intro form fieldset{
-    margin-top: 1vw;
+.intro form h3{
+    color:rgba(255,255,255,0.7);
+    font-size: 2vw;
+}
+.intro input{
+    width: 100%;
+    margin-top: 2vw;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter:blur(2em);
+    border:none;
+    font-size: 1.5vw;
+    border-radius: 2vw;
+    padding:1vw 3vw;
 }
 .intro form input:focus{
-    transform:scale(1.1);
+    outline: none;
+    transform:scale(1.01);
 }
-.intro form input[type="text"],
-.intro form input[type="email"],
-.intro form input[type="tel"],
-.intro form input[type="password"],
-.intro form input[type="datetime-local"],
-.intro form input[type="file"]
-{
-    width: 85%;
-    padding:0.4vw;
-    font-size: 0.8em;
-}
-.intro form input[type="text"]::placeholder,
-.intro form input[type="email"]::placeholder,
-.intro form input[type="tel"]::placeholder,
-.intro form input[type="password"]::placeholder{
-    color: red;
-}
-.intro form button[type="submit"]{
-    background-color: green;
-    color: white;
-    padding:1vw 2vw;
+.intro form button{
+    font-size: 1.2vw;
+    background-color: rgba(255,255,255,0.7);
+    padding:1vw 3vw;
     border-radius: 2vw;
-    cursor:pointer;
-    margin-top: 1vw;
+    margin-top: 2vw;
 }
-.intro form.hidden{
-    display: none;
+.intro form p{
+    font-size: 1.2vw;
+    color: rgba(255,255,255,0.7);
+    margin-top: 2vw;
 }
-fieldset{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
+.intro form p>a{
+    color: orange;
 }
-.closeForm{
-    top: 1vw;
-    right: 1vw;
+.square{
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(2em);
+    border-radius: 2vw;
+    animation-duration:3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index: -2;
+}
+.square.first{
+    animation-name:first;
     position: absolute;
-    width: 3vw;
-    height: 3vw;
-    background-image: url("../img/close.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    object-position: center;
+    left: -4vw;
+    top:0;
+    width: 5vw;
+    height: 5vw;
 }
-@media screen and (max-width:768px){
-    .accountButtons{
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
+.square.second{
+    width: 7vw;
+    height: 7vw;
+    top:-5vw;
+    right:0;
+    animation-name:second;
+    position: absolute;
+}
+.square.third{
+    width: 6vw;
+    height: 6vw;
+    bottom:-7vw;
+    right:-7vw;
+    animation-name:third;
+    position: absolute;
+}
+.square.fourth{
+    width: 8vw;
+    height: 8vw;
+    bottom:-7vw;
+    right:-7vw;
+    animation-name:fourth;
+    position: absolute;
+}
+.square.fifth{
+    width: 5vw;
+    height: 5vw;
+    bottom:-7vw;
+    right:-7vw;
+    animation-duration:8s;
+    animation-name:fifth;
+    position: absolute;
+    animation-direction: normal;
+}
+@keyframes first{
+    from{
+        top:-5vw;
     }
-    .accountButtons button:last-child{
-        margin-left: 0vw;
-        margin-top:4vw;
+    to{
+        top:calc(100%);
+    }
+}
+@keyframes second{
+    from{
+        right:100%;
+    }
+    to{
+        right:-7vw;
+    }
+}
+@keyframes third{
+    from{
+        bottom:-7vw;
+    }
+    to{
+        bottom:100%;
+    }
+}
+@keyframes fourth{
+    from{
+        right:-7vw;
+    }
+    to{
+        right:100%;
+    }
+}
+@keyframes fifth{
+    from{
+        top:-7vw;
+        left: -7vw;
+    }
+    25%{
+        top:-7vw;
+        left:100%;
+    }
+    50%{
+        top:100%;
+        left: 100%;
+    }
+    75%{
+        top:100%;
+        left: -7vw;
+    }
+    to{
+        top:-7vw;
+        left: -7vw;
     }
 }
